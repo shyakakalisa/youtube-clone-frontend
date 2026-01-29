@@ -1,6 +1,4 @@
-/* ==============================
-   Global Styles
-============================== */
+/* ===== Global ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -17,9 +15,7 @@ h2, h4, p {
   margin: 0;
 }
 
-/* ==============================
-   Header
-============================== */
+/* ===== Header ===== */
 header {
   display: flex;
   align-items: center;
@@ -46,9 +42,7 @@ header input {
   color: white;
 }
 
-/* ==============================
-   Video Grid (Home Page)
-============================== */
+/* ===== Video Grid ===== */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -58,30 +52,35 @@ header input {
 
 .video-card {
   cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #181818;
 }
 
-.thumbnail {
-  background: #333;
-  height: 150px;
+.video-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.thumbnail img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  position: relative;
+  height: 150px;
+  object-fit: cover;
 }
 
 .video-card h4 {
   font-size: 16px;
-  margin-bottom: 4px;
+  margin: 8px 12px 4px;
 }
 
 .video-card p {
   font-size: 14px;
   color: #aaa;
+  margin: 0 12px 12px;
 }
 
-/* ==============================
-   Watch Page
-============================== */
+/* ===== Watch Page ===== */
 .watch-page {
   padding: 20px;
   display: flex;
@@ -101,7 +100,6 @@ header input {
   border-radius: 8px;
 }
 
-/* Video title and channel */
 #videoTitle {
   font-size: 24px;
   margin-bottom: 8px;
@@ -115,9 +113,7 @@ header input {
   text-align: center;
 }
 
-/* ==============================
-   Responsive
-============================== */
+/* ===== Responsive ===== */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
